@@ -242,15 +242,13 @@ p {
  max-width: 280px;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
+
 .inputs,
 .textarea {
     display: block;
     width: 100%;
     padding: 12px 18px;
-
+    margin: 15px 0;
     font-family: inherit;
     font-size: 1rem;
     color: #fff;
@@ -268,7 +266,43 @@ p {
 .textarea::placeholder {
     color: #fff;
 }
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color:rgba(0,0,0, .56);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 38px 40px 40px;
+    width: 280px;
+    min-height: 100px;
+    background-color: #f2f2f2;
+}
+.modal__close {
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    font-size: 41px;
+    line-height: 21px;
+    color: #fff;
+    cursor: pointer;
+}
+.modal__subtitle {
+    color: #0d0d0d;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
 
+#thanks {
+    display: none;
+}
 /*Media
 ============*/
 @media (max-width: 1000px) {
@@ -333,6 +367,12 @@ p {
     }
     .header-brand {
         margin-bottom: 2rem;
+    }
+    .modal__close {
+        color: #000;
+        font-size: 50px;
+        top: 15px;
+        right: 15px;
     }
 }
 
